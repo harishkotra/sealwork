@@ -137,18 +137,6 @@ EMPLOYER_PRIVATE_KEY=0x...
 CANDIDATE_PRIVATE_KEY=0x...
 ```
 
-Generate fresh keys:
-```bash
-node -e "
-const {Wallet} = require('ethers');
-['EMPLOYEE','EMPLOYER','CANDIDATE'].forEach(r => {
-  const w = Wallet.createRandom();
-  console.log(r + '_PRIVATE_KEY=' + w.privateKey);
-})"
-```
-
-Fund generated addresses with T3 test tokens at [terminal3.io](https://terminal3.io).
-
 ### Run
 
 ```bash
