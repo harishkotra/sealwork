@@ -237,17 +237,3 @@ fn compute_payroll(input: GenericInput) -> Result<Vec<u8>, String> {
     })?)
 }
 ```
-
----
-
-## Bounty Submission Answers
-
-**Problem:** Payroll and hiring require sharing the most sensitive personal and financial data with employers and recruiters — with no cryptographic guarantee it won't be misused. SealWork eliminates the exposure surface: employees and candidates store data once in a hardware TEE, and AI agents handle all downstream operations without it ever leaving.
-
-**Why verifiable identity matters:** Agents act in high-stakes situations — disbursing salary, making hiring decisions. Without DID-backed identity, any process could impersonate an employer agent. T3 ADK's Ethereum-linked DIDs mean every cross-tenant invocation is cryptographically signed by a verified agent identity. The `agent-auth-update` grant scopes exactly which contract functions that DID can invoke — no other agent, even with identical code, can execute that payroll run.
-
-**Documentation gap found:** The TypeScript SDK types diverge significantly from the documented API shapes — `T3nClientConfig` requires `wasmComponent` (undocumented), `GuestToHostHandlers.EthSign` is needed for server-side Ethereum signing (undocumented), and `executeControl("map-entry-set")` is the only way to write KV entries (undocumented). A TypeScript-first quickstart that compiles would cut onboarding from hours to minutes.
-
----
-
-Built for the Terminal 3 Bounty Challenge · June 2026
